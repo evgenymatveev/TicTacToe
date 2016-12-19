@@ -7,10 +7,5 @@
 *.ear
 hs_err_pid*
 .gitignore
-.idea/.name
-.idea/compiler.xml
-.idea/copyright/
-.idea/markdown-navigator/
-.idea/misc.xml
-.idea/workspace.xml
+.idea
 target/
