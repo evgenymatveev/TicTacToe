@@ -36,7 +36,7 @@ public class CurrentMoveControllerTest {
                                                         throws Exception {      
         final FieldSmall inputField = new FieldSmall();
         final Point p = new Point(x, y);
-        fieldSmall.setFigure(p, Figure.X);
+        inputField.setFigure(p, Figure.X);
         
         CurrentMoveController currentMoveController = new CurrentMoveController();
         
