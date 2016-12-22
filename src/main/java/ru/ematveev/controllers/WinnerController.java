@@ -30,7 +30,7 @@ public class WinnerController {
                 && fieldSmall.getFigure(p6) != null
                 && fieldSmall.getFigure(p4).equals(fieldSmall.getFigure(p5))
                 && fieldSmall.getFigure(p5).equals(fieldSmall.getFigure(p6))) {
-                return fieldSmall.getFigure(p1);
+                return fieldSmall.getFigure(p4);
         }
         //проверка строк
         for(int i = 0; i < fieldSmall.getSize(); i++){
@@ -43,7 +43,7 @@ public class WinnerController {
                     && fieldSmall.getFigure(p9) != null
                     && fieldSmall.getFigure(p7).equals(fieldSmall.getFigure(p8))
                     && fieldSmall.getFigure(p8).equals(fieldSmall.getFigure(p9))) {
-                    return fieldSmall.getFigure(p1);
+                    return fieldSmall.getFigure(p7);
             }
         }
         //проверка столбцов
@@ -57,7 +57,7 @@ public class WinnerController {
                     && fieldSmall.getFigure(p12) != null
                     && fieldSmall.getFigure(p10).equals(fieldSmall.getFigure(p11))
                     && fieldSmall.getFigure(p11).equals(fieldSmall.getFigure(p12))) {
-                return fieldSmall.getFigure(p1);
+                return fieldSmall.getFigure(p10);
             }
         }
         return null;
