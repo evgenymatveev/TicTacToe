@@ -21,22 +21,20 @@ public class ConsoleView implements ICoordinateGetter {
 	    System.out.println(fieldBuilder.toString());
     }
 
-        void generateLine(final FieldSmall field,
-                          final int x,
-                          final StringBuilder sb) {
-                            for (int y = 0; y < field.getSize(); y++) {
-                                if (y != 0)
-		                            sb.append("|");
-	                                sb.append(" ");
-                                    final Figure figure;
-                                    figure = field.getFigure(new Point(y, x));
-	                                sb.append(figure != null ? figure : " ");
-	                                sb.append(" ");
+        void generateLine(final FieldSmall field, final int x, final StringBuilder sb) {
+            for (int y = 0; y < field.getSize(); y++) {
+                if (y != 0)
+                    sb.append("|");
+                    sb.append(" ");
+                    final Figure figure;
+                    figure = field.getFigure(new Point(y, x));
+                    sb.append(figure != null ? figure : " ");
+                    sb.append(" ");
         }
-	    sb.append("\n");
+            sb.append("\n");
     }
         void generateSeparator(final StringBuilder sb) {
-	sb.append("~~~~~~~~~~~\n");
+	    sb.append("~~~~~~~~~~~\n");
     }
 
 }
