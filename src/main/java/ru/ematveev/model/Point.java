@@ -1,7 +1,7 @@
 package ru.ematveev.model;
 
 public class Point{
-	
+
 	private final int x;
 	private final int y;
 

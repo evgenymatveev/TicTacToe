@@ -12,14 +12,14 @@ public class FieldSmall {
 
 	public int getSize() {
 		return FIELD_SIZE;
-    	}
+	}
 
-   	public Figure getFigure(final Point point) {
+	public Figure getFigure(final Point point) {
 		return figures[point.getX()][point.getY()];
-    	}
+	}
 
 	public void setFigure(final Point point, final Figure figure) {
 		figures[point.getX()][point.getY()] = figure;
-    	}
+	}
 
 }
