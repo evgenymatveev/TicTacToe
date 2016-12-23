@@ -8,8 +8,8 @@ import ru.ematveev.model.exception.InvalidPointException;
 
 public class MoveController {
     public void applyFigure(final FieldSmall fieldSmall,
-                               final Point point,
-                               final Figure figure) throws AlreadyOccupiedException, InvalidPointException{
+                            final Point point,
+                            final Figure figure) throws AlreadyOccupiedException, InvalidPointException{
         if (point.getX() < 0
                 || point.getY() < 0
                 || point.getX() > fieldSmall.getSize()
