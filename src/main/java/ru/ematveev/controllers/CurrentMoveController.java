@@ -23,9 +23,7 @@ public class CurrentMoveController {
                 if(fieldSmall.getFigure(new Point(i, j)) == Figure.O){
                     countO++;
                 }
-
             }
-
         }
         return countX == countO ? Figure.X : Figure.O;
     }
