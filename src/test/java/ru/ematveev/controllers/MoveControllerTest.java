@@ -10,8 +10,9 @@ import ru.ematveev.model.exception.InvalidPointException;
 import static org.junit.Assert.*;
 
 public class MoveControllerTest {
+
     @Test(expected = InvalidPointException.class)
-    public void applyFigureWhenXNegativ() throws Exception {
+    public void testApplyFigureWhenXNegativ() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
 
         Point point = new Point(-1, 0);
@@ -23,8 +24,9 @@ public class MoveControllerTest {
     }
 
     @Test(expected = InvalidPointException.class)
-    public void applyFigureWhenYNegativ() throws Exception {
+    public void testApplyFigureWhenYNegativ() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
+
         Point point = new Point(0, -1);
 
         MoveController moveController = new MoveController();
@@ -34,7 +36,7 @@ public class MoveControllerTest {
     }
 
     @Test(expected = InvalidPointException.class)
-    public void applyFigureWhenXandYNegativ() throws Exception {
+    public void testApplyFigureWhenXandYNegativ() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
 
         Point point = new Point(-2, -2);
@@ -46,7 +48,7 @@ public class MoveControllerTest {
     }
 
     @Test(expected = InvalidPointException.class)
-    public void applyFigureWhenXMoreFieldSize() throws Exception {
+    public void testApplyFigureWhenXMoreFieldSize() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
 
         Point point = new Point(500, 1000);
@@ -57,7 +59,7 @@ public class MoveControllerTest {
 
     }
     @Test(expected = AlreadyOccupiedException.class)
-    public void applyFigureWhenCellBusy() throws Exception {
+    public void testApplyFigureWhenCellBusy() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
 
         Point point = new Point(1, 2);
