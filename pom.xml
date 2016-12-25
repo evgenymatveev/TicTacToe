@@ -28,7 +28,7 @@
                 <version>2.7</version>
                 <executions>
                     <execution>
-                        <phase>test</phase>
+                        <phase>package</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
