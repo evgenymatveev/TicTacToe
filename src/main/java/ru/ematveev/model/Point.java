@@ -1,20 +1,41 @@
 package ru.ematveev.model;
 
-public class Point{
-
+/**
+ * class Point for create point x and y.
+ */
+public class Point {
+	/**
+	 * coordinate x.
+	 */
 	private final int x;
+	/**
+	 * coordinate y.
+	 */
 	private final int y;
 
-	public Point(final int x, final int y){
+	/**
+	 * constructor.
+	 * @param x x.
+	 * @param y y.
+	 */
+	public Point(final int x, final int y) {
 		this.x = x;
 		this.y = y;
 	}
 
-	public int getX(){
+	/**
+	 * return the value x.
+	 * @return x
+	 */
+	public int getX() {
 		return x;
 	}
 
-	public int getY(){
+	/**
+	 * return the value y.
+	 * @return y
+	 */
+	public int getY() {
 		return y;
 	}
 }
