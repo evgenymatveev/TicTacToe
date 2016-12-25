@@ -10,12 +10,15 @@ public class Player {
 	private final String name;
 
 	/**
-	 * player name.
+	 * Class Player.
+	 * @author Matveev Evgeny.
+	 * @version 1.0.
+	 * @since 25.12.2016.
 	 */
 	private final Figure figure;
 
 	/**
-	 * constructor.
+	 * constructor of Player.
 	 * @param name name.
 	 * @param figure figure.
 	 */
