@@ -1,7 +1,10 @@
 package ru.ematveev.model;
 
 /**
- * class Point for create point x and y.
+ * Сlass Point.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
  */
 public class Point {
 	/**
@@ -14,7 +17,7 @@ public class Point {
 	private final int y;
 
 	/**
-	 * constructor.
+	 * constructor of Point.
 	 * @param x x.
 	 * @param y y.
 	 */
