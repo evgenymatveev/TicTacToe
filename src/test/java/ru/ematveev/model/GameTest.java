@@ -1,11 +1,18 @@
 package ru.ematveev.model;
 
 import org.junit.Test;
-import org.omg.CORBA.BAD_CONTEXT;
-
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
+/**
+ * Class GameTest tests the metods of the class Game.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
+ */
 public class GameTest {
+    /**
+     * Metod check return player1.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetPlayer1() throws Exception {
         Player inputValue = new Player("Evgeny", Figure.O);
@@ -18,7 +25,10 @@ public class GameTest {
         assertEquals(expectedValue, actualValue);
 
     }
-
+    /**
+     * Metod check return player2.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetPlayer2() throws Exception {
         Player inputValue = new Player("Max", Figure.X);
@@ -30,12 +40,18 @@ public class GameTest {
 
         assertEquals(expectedValue, actualValue);
     }
-
+    /**
+     * Metod check return field.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetField() throws Exception {
 
     }
-
+    /**
+     * Metod check return Name.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetName() throws Exception {
         final String inputValue = "Evgeny";

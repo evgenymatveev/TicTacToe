@@ -2,12 +2,21 @@ package ru.ematveev.model;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 
 /**
- * Created by apple on 16.12.16.
+ * Class FieldSmallTest tests the metods of the class FieldSmall.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
  */
+
 public class FieldSmallTest {
+    /**
+     * Metod check return size of the field.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetSize() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
@@ -17,11 +26,14 @@ public class FieldSmallTest {
         assertEquals(expectedValue, actualValue);
 
     }
-
+    /**
+     * Metod check return figure..
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetFigure() throws Exception {
         FieldSmall fieldSmall = new FieldSmall();
-        Point inputPoint = new Point(0,0);
+        Point inputPoint = new Point(0, 0);
         Figure inputFigure = Figure.O;
         fieldSmall.setFigure(inputPoint, inputFigure);
         Figure expectedValue = inputFigure;

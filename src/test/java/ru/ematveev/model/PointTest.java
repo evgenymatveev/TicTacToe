@@ -2,12 +2,19 @@ package ru.ematveev.model;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 /**
- * Created by apple on 16.12.16.
+ * Class PointTest tests the metods of the class Point.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
  */
+
 public class PointTest {
+    /**
+     * Metod check return x.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetX() throws Exception {
         int inputValue = 1;
@@ -19,7 +26,10 @@ public class PointTest {
         assertEquals(expectedValue, actualValue);
 
     }
-
+    /**
+     * Metod check return y.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetY() throws Exception {
         int inputValue = 1;

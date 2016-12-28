@@ -2,12 +2,18 @@ package ru.ematveev.model;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 /**
- * Created by apple on 16.12.16.
+ * Class PlayerTest tests the metods of the class Player.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
  */
 public class PlayerTest {
+    /**
+     * Metod check return Name.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetName() throws Exception {
         final String inputValue = "Evgeny";
@@ -17,7 +23,10 @@ public class PlayerTest {
 
         assertEquals(expectedValue, actualValue);
     }
-
+    /**
+     * Metod check return figure.
+     * @throws Exception Exception.
+     */
     @Test
     public void testGetFigure() throws Exception {
         final Figure inputValue = Figure.O;
