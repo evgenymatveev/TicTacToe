@@ -1,24 +1,22 @@
 package ru.ematveev.model;
+
 /**
- * class Player create players.
+ * Class Player - create player and figure for game.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
  */
 public class Player {
-
 	/**
-	 * the figure which the player is playing.
+	 * The name which the player is playing.
 	 */
 	private final String name;
-
-	/**
-	 * Class Player.
-	 * @author Matveev Evgeny.
-	 * @version 1.0.
-	 * @since 25.12.2016.
-	 */
+    /**
+     * The figure which the player is playing.
+     */
 	private final Figure figure;
-
 	/**
-	 * constructor of Player.
+	 * Сonstructor of Player.
 	 * @param name name.
 	 * @param figure figure.
 	 */
@@ -26,20 +24,18 @@ public class Player {
 		this.name = name;
 		this.figure = figure;
 	}
-
 	/**
-	 * returns the name of the player.
+	 * The metod returns the name of the player.
 	 * @return name.
 	 */
 	public String getName() {
 		return name;
 	}
-
 	/**
-	 * returns the figure of the player.
+	 * The metod returns the figure of the player.
 	 * @return figure.
 	 */
-	public Figure getFigure() {
+    public Figure getFigure() {
 		return figure;
 	}
 }

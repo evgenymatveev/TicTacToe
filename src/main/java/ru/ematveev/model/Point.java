@@ -1,23 +1,23 @@
 package ru.ematveev.model;
 
 /**
- * Сlass Point.
+ * Сlass Point - create cordinate for field.
  * @author Matveev Evgeny.
  * @version 1.0.
  * @since 25.12.2016.
  */
 public class Point {
 	/**
-	 * coordinate x.
+	 * Coordinate x.
 	 */
 	private final int x;
 	/**
-	 * coordinate y.
+	 * Coordinate y.
 	 */
 	private final int y;
 
 	/**
-	 * constructor of Point.
+	 * Constructor of class Point.
 	 * @param x x.
 	 * @param y y.
 	 */
@@ -27,7 +27,7 @@ public class Point {
 	}
 
 	/**
-	 * return the value x.
+	 * The metod getX - return the value x.
 	 * @return x
 	 */
 	public int getX() {
@@ -35,7 +35,7 @@ public class Point {
 	}
 
 	/**
-	 * return the value y.
+	 * The metod getY - return the value y.
 	 * @return y
 	 */
 	public int getY() {
