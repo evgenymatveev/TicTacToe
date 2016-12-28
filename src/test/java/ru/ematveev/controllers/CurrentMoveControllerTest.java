@@ -4,11 +4,18 @@ import org.junit.Test;
 import ru.ematveev.model.FieldSmall;
 import ru.ematveev.model.Figure;
 import ru.ematveev.model.Point;
-
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertSame;
+/**
+ * Class CurrentMoveControllerTest tests the metods of the class CurrentMoveController.
+ * @author Matveev Evgeny.
+ * @version 1.0.
+ * @since 25.12.2016.
+ */
 public class CurrentMoveControllerTest {
-
+    /**
+     * Test testCurrentMoveWhenInputFieldIsEmpty().
+     * @throws Exception Exception.
+     */
     @Test
     public void testCurrentMoveWhenInputFieldIsEmpty() throws Exception {
         CurrentMoveController currentMoveController = new CurrentMoveController();
@@ -19,6 +26,10 @@ public class CurrentMoveControllerTest {
         assertSame(Figure.X, actualValue);
     }
 
+    /**
+     * Metod testCurrentMoveWhenOnlyOneFigureXOnTheField().
+     * @throws Exception Exception.
+     */
     @Test
     public void testCurrentMoveWhenOnlyOneFigureXOnTheField() throws Exception {
         testCurrentMoveWhenOnlyOneFigureXOnTheField(0, 0);
@@ -32,6 +43,12 @@ public class CurrentMoveControllerTest {
         testCurrentMoveWhenOnlyOneFigureXOnTheField(2, 2);
     }
 
+    /**
+     * Metod testCurrentMoveWhenOnlyOneFigureXOnTheField().
+     * @param x x.
+     * @param y y.
+     * @throws Exception Exception.
+     */
     private void testCurrentMoveWhenOnlyOneFigureXOnTheField(final int x, final int y)
             throws Exception {
         final FieldSmall inputField = new FieldSmall();
