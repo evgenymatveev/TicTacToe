@@ -9,3 +9,6 @@ hs_err_pid*
 .gitignore
 .idea
 target/
+.DS_Store
+*.iml
+tmp
