@@ -11,6 +11,19 @@ import ru.ematveev.model.Point;
  */
 public class ConsoleView implements ICoordinateGetter {
     /**
+     * Add IPrinter printer for create mock object.
+     */
+    private final IPrinter printer;
+
+    /**
+     * constructor.
+     * @param printer printer.
+     */
+    public ConsoleView(final IPrinter printer) {
+        this.printer = printer;
+    }
+
+    /**
      * Metod return Point with coordinate 0 and 0.
      * @param field field.
      * @return Point.
@@ -18,7 +31,6 @@ public class ConsoleView implements ICoordinateGetter {
     public Point getMoveCoordinate(final FieldSmall field) {
         return new Point(0, 0);
     }
-
     /**
      * Metod draws the playing field in the console.
      * @param field field.
@@ -31,9 +43,8 @@ public class ConsoleView implements ICoordinateGetter {
         }
             generateLine(field, x, fieldBuilder);
         }
-        System.out.println(fieldBuilder.toString());
+        printer.println(fieldBuilder.toString());
     }
-
     /**
      * Metod draws elements the field in the console (" ", "|").
      * @param field field.
@@ -53,7 +64,6 @@ public class ConsoleView implements ICoordinateGetter {
         }
         sb.append("\n");
     }
-
     /**
      * Metod draws the separator.
      * @param sb stringBuilder.
@@ -62,4 +72,14 @@ public class ConsoleView implements ICoordinateGetter {
         sb.append("~~~~~~~~~~~\n");
     }
 
+    /**
+     * Create interface IPrinter for create mock object.
+     */
+    public interface IPrinter {
+        /**
+         * Method println instead println of System.out.
+         * @param text text.
+         */
+        void println(String text);
+    }
 }
