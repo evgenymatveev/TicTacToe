@@ -1,15 +1,11 @@
 package ru.ematveev.view;
 
-//import org.junit.Before;
-
 import org.junit.Test;
-
 import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertSame;
 import ru.ematveev.model.FieldSmall;
 import ru.ematveev.model.Figure;
 import ru.ematveev.model.Point;
-
+import static org.junit.Assert.assertSame;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -20,7 +16,6 @@ import static org.mockito.Mockito.verify;
  * @version 1.0.
  * @since 25.12.2016.
  */
-
 public class ConsoleViewTest {
     /**
      * Check the output lines on the screen when the field set all figures X.
@@ -46,7 +41,6 @@ public class ConsoleViewTest {
         consoleView.show(fieldSmall);
         verify(printer).println(" X | X | X \n~~~~~~~~~~~\n X | X | X \n~~~~~~~~~~~\n X | X | X \n");
     }
-
     /**
      * Check the output lines on the screen when the field null.
      *
@@ -62,7 +56,6 @@ public class ConsoleViewTest {
         consoleView.show(fieldSmall);
         verify(printer).println("   |   |   \n~~~~~~~~~~~\n   |   |   \n~~~~~~~~~~~\n   |   |   \n");
     }
-
     /**
      * Check the output separetor on the screen.
      *
@@ -82,11 +75,12 @@ public class ConsoleViewTest {
         assertEquals(expectedValue, inputStringBuilder.toString());
     }
 
-    //@Test
     /**
      * Check the output of the first row field on the screen.
+     * @throws Exception Exception.
      */
-    /*public void testGenerateLineWnenXequal0() throws Exception {
+    @Test
+    public void testGenerateLineWnenXequal0() throws Exception {
         int x = 0;
         ConsoleView.IPrinter printer = mock(ConsoleView.IPrinter.class);
         final ConsoleView consoleView = new ConsoleView(printer);
@@ -100,22 +94,26 @@ public class ConsoleViewTest {
 
         consoleView.generateLine(fieldSmall, x, stringBuilder);
 
-        String expected = " X | X | X \n ";
+        String expected = " X | X | X \n";
         String actualValue = stringBuilder.toString();
 
-        assertSame(expected, actualValue);
-    }*/
+        assertEquals(expected, actualValue);
+    }
 
-    //@Test
-    /*public void testGetMoveCoordinate() throws Exception {
+    /**
+     * Check return Point which coordinate x = 0 and y = 0.
+     * @throws Exception Exception.
+     */
+    @Test
+    public void testGetMoveCoordinate() throws Exception {
         final int x = 0;
         final int y = 0;
         final ConsoleView.IPrinter printer = mock(ConsoleView.IPrinter.class);
         final ConsoleView consoleView = new ConsoleView(printer);
         FieldSmall fieldSmall = new FieldSmall();
 
-
-        assertSame(new Point(x, y), consoleView.getMoveCoordinate(fieldSmall));
-    }*/
+        assertSame(x, consoleView.getMoveCoordinate(fieldSmall).getX());
+        assertSame(x, consoleView.getMoveCoordinate(fieldSmall).getY());
+    }
 
 }
